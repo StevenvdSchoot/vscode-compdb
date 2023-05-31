@@ -1,0 +1,50 @@
+{
+	"name": "compdb",
+	"publisher": "svdschoot",
+	"displayName": "Compdb runner",
+	"description": "Compdb runner (CMake clangd bridge)",
+	"version": "1.0.0",
+	"repository": "https://github.com/stevenvdschoot/vscode-compdb",
+	"categories": [
+		"Programming Languages",
+		"Linters",
+		"Formatters"
+	],
+	"keywords": [
+		"cmake",
+		"tools",
+		"build",
+		"c++",
+		"compdb",
+		"clang-tidy",
+		"clangd"
+	],
+	"engines": {
+		"vscode": "^1.74.0"
+	},
+	"activationEvents": [
+		"workspaceContains:CMakeLists.txt",
+		"workspaceContains:*/CMakeLists.txt",
+		"workspaceContains:*/*/CMakeLists.txt",
+		"workspaceContains:*/*/*/CMakeLists.txt",
+		"workspaceContains:.vscode/cmake-kits.json"
+	],
+	"main": "./compdb.js",
+	"contributes": {
+		"commands": []
+	},
+	"extensionDependencies": [
+		"twxs.cmake",
+		"llvm-vs-code-extensions.vscode-clangd"
+	],
+	"scripts": {},
+	"dependencies": {
+		"chokidar": "^3.5.1",
+		"python-shell": "^5.0.0",
+		"lodash": "^4.17.15",
+		"vscode-cmake-tools": "^1.0.0"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.73.0"
+	}
+}
