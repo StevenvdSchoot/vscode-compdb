@@ -37,7 +37,9 @@
 		"twxs.cmake",
 		"llvm-vs-code-extensions.vscode-clangd"
 	],
-	"scripts": {},
+	"scripts": {
+		"package": "vsce package -o compdb.vsix"
+	},
 	"dependencies": {
 		"chokidar": "^3.5.1",
 		"python-shell": "^5.0.0",
@@ -45,6 +47,7 @@
 		"vscode-cmake-tools": "^1.0.0"
 	},
 	"devDependencies": {
-		"@types/vscode": "^1.73.0"
+		"@types/vscode": "^1.73.0",
+		"@vscode/vsce": "^2.19.0"
 	}
 }
