@@ -3,7 +3,7 @@
 	"publisher": "svdschoot",
 	"displayName": "Compdb runner",
 	"description": "Compdb runner (CMake clangd bridge)",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"repository": "https://github.com/stevenvdschoot/vscode-compdb",
 	"categories": [
 		"Programming Languages",
