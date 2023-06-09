@@ -123,8 +123,8 @@ class WorkspaceManager {
 
 	async runCompDB(workspaceFolder, buildDirectory) {
 		await Promise.all(this.#compDBRunners
-			.filter(worker => worker.workspaceFolder !== workspaceFolder)
-			.forEach(worker => worker.runCompDB()))
+			.filter(worker => worker.workspaceFolder === workspaceFolder)
+			.map(worker => worker.runCompDB(buildDirectory)));
 	}
 
 	#handleDidChangeWorkspaceFolders(workspaceFoldersChangeEvent) {
