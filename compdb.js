@@ -122,8 +122,6 @@ class WorkspaceManager {
 	}
 
 	async runCompDB(workspaceFolder, buildDirectory) {
-		console.log(` *** Reconfigure for workspace ${workspaceFolder} using build dir ${buildDirectory}`)
-
 		await Promise.all(this.#compDBRunners
 			.filter(worker => worker.workspaceFolder !== workspaceFolder)
 			.forEach(worker => worker.runCompDB()))
@@ -146,8 +144,6 @@ class CMakeManager {
 
 	constructor(api) {
 		this.#cmakeApi = api
-
-		console.log(' ** CMake API Manager:', api.manager);
 
 		this.#handleActiveProjectChanged(api.manager.projectController.activeProject)
 		api.onActiveProjectChanged(this.#handleActiveProjectChanged, this); // TODO: Verify argument
