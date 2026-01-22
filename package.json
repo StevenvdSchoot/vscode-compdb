@@ -43,7 +43,7 @@
 	"dependencies": {
 		"chokidar": "^3.5.1",
 		"python-shell": "^5.0.0",
-		"lodash": "^4.17.15",
+		"lodash": "^4.17.23",
 		"vscode-cmake-tools": "^1.0.0"
 	},
 	"devDependencies": {
